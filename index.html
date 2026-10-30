@@ -52,13 +52,14 @@
     <div class="container">
       <div class="field">
         <label for="html">Input for "html2json" conversion:</label>
-        <textarea id="html" placeholder="Enter your HTML"></textarea>
+        <textarea id="html" placeholder="Enter your HTML" oninput="clearConversionMessage()"></textarea>
       </div>
       <div class="field">
         <label for="json">Results of "html2json" conversion:</label>
         <textarea disabled id="json" placeholder="Here will be output from your html2json function"></textarea>
       </div>
     </div>
+    <p id="conversion-message" role="status"></p>
     <div class="buttons">
       <button onclick="convertHtml2JsonAndSet()">Convert to JSON</button>
       <button onclick="showExample1()">Input Example 1</button>
